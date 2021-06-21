@@ -1,0 +1,26 @@
+{
+    "name": "eshop",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --progress --color --hot -env.development --config tools/webpack.js",
+        "start": "node backend/index.js",
+        "server": "nodemon backend/index.js",
+        "client": "cd frontend && npm start",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "data:import": "node backend/seederScript"
+    },
+    "keywords": [],
+    "author": "saurabh",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.11.8"
+    },
+    "devDependencies": {
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.6"
+    }
+}
